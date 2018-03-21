@@ -37,3 +37,4 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       template: '<h1>404</h1>'
     });
 }]);
+

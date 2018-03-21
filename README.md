@@ -28,6 +28,15 @@ CREATE TABLE "users" (
   "username" varchar(80) not null UNIQUE,
   "password" varchar(240) not null
 );
+
+CREATE TABLE monday (
+    id SERIAL PRIMARY KEY,
+    bfooditem character varying(120),
+    lfooditem character varying(120),
+    dfooditem character varying(120),
+    date DATE not null default current_date
+   
+);
 ```
 
 ## Screen Shot
