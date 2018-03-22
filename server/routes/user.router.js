@@ -46,12 +46,41 @@ router.post('/register', (req, res, next) => {
 router.post('/login', userStrategy.authenticate('local'), (req, res) => {
   res.sendStatus(200);
 });
-
 // clear all server session information about this user
 router.get('/logout', (req, res) => {
   // Use passport's built-in method to log out the user
   req.logout();
   res.sendStatus(200);
 });
+
+
+
+
+
+
+//monday
+// router.post('/', (req, res, next) => {
+//   const monday_id = req.body.monday_id;
+//   const bFood = req.body.bFood;
+  
+
+//   var saveFood = {
+//     monday_id: req.body.monday_id,
+//     bFood: req.body.bFood, 
+//   }
+//   pool.query('INSERT INTO monday (monday_id, bfood) VALUES ($1, $2)',
+//     [saveFood.monday_id,saveFood.bfood], (err, result) => {
+//       if (err) {
+//         console.log("Error inserting data: ", err);
+//         res.sendStatus(500);
+//       } else {
+//         res.sendStatus(201);
+//       }
+//     });
+//   console.log("var save savefood is", saveFood);
+//   res.sendStatus(200);
+
+// });
+
 
 module.exports = router;

@@ -3,6 +3,8 @@
 
     <h1 id="welcome" class="lead">Welcome, {{vm.userObject.userName}}!</h1>
     <button class="btn btn-default" ng-click="vm.userService.logout()">Log Out</button>
+    <input ng-model="vm.monday.bfood">
+    <button ng-click="vm.saveMonday()">add breakfast</button>
 </div>
 
-<button>add breakfast</button>
+

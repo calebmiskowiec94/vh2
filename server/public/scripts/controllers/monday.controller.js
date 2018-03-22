@@ -1,20 +1,24 @@
-myApp.controller('MondayController', function ($http, $location, MondayService) {
-    console.log('MondayController created');
-    var vm = this;
-    vm.monday = {
-        bfooditem: '',//do i need to do vm.mondaybreakfast and only submit bfooditem? and then redo for lunch/dinner etc. so it will be a new function for submitting monday breakfast, a new one for monday lunch etc... so three function per day of the week.... seems like a lot...
-        lfooditem: '',
-        dfooditem: '',
-        date: ''
-    };
-    vm.mondaySend = function () {
-        console.log('set up monday');
+// myApp.controller('MondayController', ['$http', '$location', 'UserService', function ($http, $location, UserService) {
+//     console.log('MondayController created');
+//     var self = this;
+//     self.monday = {
+//         bfood: ''
+//     };
+//     self.message = '';
 
-        console.log('MondayController --  -- sending info to server...', vm.monday);
-        $http.post('/', vm.monday).then(function (response) {
-            $location.path('/home');
-        });
-    };
-});
-console.log(vm.monday);
+//     self.saveMonday = function () {
+         
+//             console.log('sending to server...', self.monday);
+//             $http.post('/monday', self.monday).then(function (response) {
+//                 console.log('successmonday');
+                
+//             },
+//                 function (response) {
+//                     console.log('error');
+//                     self.message = "Something went wrong. Please try again."
+//                 });
+        
+//     }
+// }]);
+
 
