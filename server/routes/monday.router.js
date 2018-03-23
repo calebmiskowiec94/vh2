@@ -5,21 +5,20 @@ const pool = require('../modules/pool.js');
 const router = express.Router();
 //post for monday breakfast
 router.post('/b', (req, res, next) => {
-    const bfood = req.body.bfood;
-    
+let day = req.body.day
+let food = req.body.type
+let meal = req.body.meal
+console.log("req.body", req.body);
 
-    var saveMonday = {
-        bfood: req.body.bfood
-        
-    };
-    console.log('new bfoodmonday:', saveMonday);
-    pool.query('INSERT INTO monday (bfood) VALUES ($1)',
-        [saveMonday.bfood], (err, result) => {
+    pool.query('INSERT INTO monday (food, meal) VALUES ($1, $2) ',
+        [food, meal], (err, result) => {
             if (err) {
                 console.log("Error inserting data: ", err);
                 res.sendStatus(500);
             } else {
-                res.sendStatus(201);
+                // res.sendStatus(201);
+                console.log(result);
+                
             }
         });
 });

@@ -7,7 +7,12 @@ body, html {
 
 .instructions .container h1 {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 500;
+}
+.instructions .container  span {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 200;
 }
 
 .instructions {
@@ -77,4 +82,8 @@ li a {
 li a:hover {
   text-decoration: underline;
   color: #eee;
+}
+p {
+font-size: 6px;
+
 }
