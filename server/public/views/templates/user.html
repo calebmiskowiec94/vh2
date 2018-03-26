@@ -1,19 +1,14 @@
 <div ng-include="'views/partials/nav.html' "></div>
 <p ng-include="'/views/partials/header.html'"></p>
 <div class="container">
-
-
-
-
-
-
-
-
+    
 
     <div ng-repeat="day in vm.daysOfWeek">
         <h2>{{day}}</h2>
+        <br>
         <div ng-repeat="meal in vm.meals">
             <h3>{{meal}}</h3>
+            
 
             <input ng-model="vm.food.type">
             <!-- vm.savefood(breskfast,) -->
@@ -21,8 +16,12 @@
         </div>
         <br>
         <br>
-        <button class="btn btn-default" ng-click="vm.userService.logout()">Log Out</button>
+        <br>
+        <br>
+        
     </div>
+    <p>{{vm}}</p>
+    <button class="btn btn-default" ng-click="vm.userService.logout()">Log Out</button>
 
 
 
@@ -66,3 +65,5 @@
     <br><br>
     <button class="btn btn-default" ng-click="vm.userService.logout()">Log Out</button> -->
 </div>
+
+
